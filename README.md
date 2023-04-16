@@ -1,4 +1,4 @@
-## My Custom React Javascript
+## 나의 작은 스트리머 리포지토리
 
 <br>
 
