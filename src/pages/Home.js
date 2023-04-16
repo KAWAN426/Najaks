@@ -17,6 +17,9 @@ function Home() {
         <Link to="/mangryeong">
           <h1>망령</h1>
         </Link>
+        <Link to="/all">
+          <h1>전체</h1>
+        </Link>
       </LinkCont>
     </Container>
   )
@@ -42,7 +45,7 @@ const LinkCont = styled.div`
   flex-direction: column;
   h1{
     padding: 30px;
-    font-size: 12vw;
+    font-size: 10vw;
   }
 `
 

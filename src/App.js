@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Hahyun from './pages/Hahyun'
 import Mangryeong from './pages/Mangryeong'
 import Sanghyeon from './pages/Sanghyeon'
+import All from './pages/AllSt'
 
 const Container = styled.div`
   width:100%;
@@ -18,6 +19,7 @@ function App() {
         <Route path="/sanghyeon" element={<Sanghyeon />} />
         <Route path="/hahyun" element={<Hahyun />} />
         <Route path="/mangryeong" element={<Mangryeong />} />
+        <Route path="/all" element={<All />} />
       </Routes>
     </Container>
   )
