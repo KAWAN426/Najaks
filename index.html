@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+  <style>
+    body,
+    html {
+      width: 100vw;
+      height: 100vh;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      background-color: rgb(14, 15, 20);
+    }
+
+    #twitch-player {
+      /* margin: 20px; */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Twitch Embed Player가 삽입될 div 요소 -->
+  <div id="twitch-player"></div>
+
+  <script>
+    const streamers = [
+      {
+        name: "김치만두",
+        id: "cman0327"
+      },
+      {
+        name: "곽춘식",
+        id: "realchunshik"
+      }, {
+        name: "왁파고",
+        id: "wakphago"
+      }, {
+        name: "비밀소녀",
+        id: "secretmemolee"
+      }, {
+        name: "해루석",
+        id: "rusuk_"
+      }, {
+        name: "권민",
+        id: "kwonmin98"
+      }, {
+        name: "히키킹",
+        id: "hikiking0"
+      }, {
+        name: "융터르",
+        id: "carnarjungtur"
+      }, {
+        name: "도파민 박사",
+        id: "dopamine_dr"
+      }, {
+        name: "뢴트게늄",
+        id: "111roentgenium"
+      }, {
+        name: "비지니스 킴",
+        id: "businesskim11"
+      }, {
+        name: "독고혜지",
+        id: "dokkhye_"
+      }, {
+        name: "소피아",
+        id: "ssoph25"
+      }, {
+        name: "프리터",
+        id: "freeter1999"
+      }, {
+        name: "단답벌레",
+        id: "dandapbug"
+      }, {
+        name: "하쿠",
+        id: "haku_0089_"
+      },
+    ]
+    function initTwitchPlayer({ id }) {
+      const width = document.body.clientWidth / 4 - 10;
+      const height = width / 16 * 9;
+      var twitchPlayer = new Twitch.Player(id, {
+        channel: id,
+        width: width,
+        height: height,
+        autoplay: false
+      });
+
+      // Twitch Embed Player를 로드합니다.
+      twitchPlayer.setVolume(0.5);
+
+      // twitchPlayer.play();
+    }
+
+    // 페이지가 로드될 때 Twitch Embed Player를 초기화합니다.
+    window.onload = function () {
+      streamers.forEach((value) => {
+        const player = document.createElement('div')
+        player.id = value.id
+        document.body.appendChild(player)
+        initTwitchPlayer({ id: value.id });
+      })
+    };
+  </script>
+</body>
+
+
+</html>
